@@ -9,5 +9,5 @@ declare module "retry-promised" {
     }
 
 
-    export function retry<T>(promiseFuncToRetry: () => T, retryOptions: RetryOptions): T;
+    export function retry(promiseFuncToRetry: () => Promise<T>, retryOptions: RetryOptions): Promise<T>;
 }
